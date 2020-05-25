@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('LOG_CHANNEL', 'stack'),
+    'default' => env('LOG_CHANNEL', 'custom'),
 
     /*
     |--------------------------------------------------------------------------
@@ -36,7 +36,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['daily'],
+            'channels' => ['single'],
             'ignore_exceptions' => false,
         ],
 
@@ -88,6 +88,14 @@ return [
         'errorlog' => [
             'driver' => 'errorlog',
             'level' => 'debug',
+        ],
+
+        'custom' => [
+            'driver' => 'custom',
+            'via' => App\GelfLogger::class,
+            'host' => 'ec2-52-15-215-198.us-east-2.compute.amazonaws.com',
+            'port' => 12201,
+            'level' => 'debug'
         ],
     ],
 
