@@ -12,7 +12,7 @@
         "doctrine/dbal": "^2.10",
         "fideloper/proxy": "^4.0",
         "graylog2/gelf-php": "^1.6",
-        "laravel/framework": "5.8.*",
+        "laravel/framework": "6.18.*",
         "laravel/horizon": "^3.6",
         "laravel/socialite": "^4.3",
         "facebook/graph-sdk": "^5.6",
